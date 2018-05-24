@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database = "QLBH";
+$database = "salesmanager";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $database);
