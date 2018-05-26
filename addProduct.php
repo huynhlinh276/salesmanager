@@ -16,7 +16,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $target_dir = "img/";
         $target_file = $target_dir .date("YmdHis"). basename($_FILES["fileToUpload"]["name"]);
         move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
-       $sql = "INSERT INTO mypham(product_code, product_name, price, description, image, type) VALUES('".$code."','".$name."','".$price."','".$description."','".$target_file."','".$type."')";
+       $sql = "INSERT INTO mypham(product_code, product_name, price, description, image, status) VALUES('".$code."','".$name."','".$price."','".$description."','".$target_file."','".$status."')";
 
 
         $result = mysqli_query($conn, $sql);

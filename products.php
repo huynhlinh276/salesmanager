@@ -11,9 +11,9 @@
 						<th>Image</th>
 						<th>Name</th>
 						<th>Code</th>
-						<th>Price</th>
+						
 						<th>Description</th>
-					
+					<th>Price</th>
 						<th>Status</th>
 						<th>Options</th>
 					</tr>
@@ -92,25 +92,25 @@
 									<label for="code">Product Code</label>
 									<input type="text" class="form-control" name="product_code" id="ucode">
 								</div>
+								
+								<div class="form-group">
+									<label for="description">Description</label>
+									<textarea class="form-control" name="description" id="udescription"></textarea>
+								</div>
 								<div class="form-group">
 									<label for="price">Price</label>
 									<input type="text" class="form-control" name="price" id="uprice">
 								</div>
 								<div class="form-group">
-									<label for="description">Description</label>
-									<textarea class="form-control" name="description" id="udescription"></textarea>
+									<label for="status">Status</label>
+									<input type="text" class="form-control" name="status" id="ustatus">
 								</div>
-								<div class="form">
-									<label for="">Category </label>
-									<select name="category" id="ucategory">
-										<option value="1">Matte</option>
-										<option value="2">Creme</option>
-										<option value="3">Lip</option>
-									</select>
-								</div>
+							
 								<div class="form-group">
 									<label for="uimage-preview">Image</label>
 									<img src="#" id="uimage-preview" style="width:50px">
+									 <img src="<?php echo $row["image"]; ?>" alt="">
+                    <input type="file" name="fileToUpload" id="fileToUpload" class="form-control">
 								</div>
 							</div>
 							<div class="modal-footer">

@@ -1,10 +1,10 @@
 console.log('ok');
 $(document).ready(function(){
 	getProducts();
-	$('#product-table').DataTable({
-		responsive: true,
-		autoWidth: false,
-	});
+	// $('#product-table').DataTable({
+	// 	responsive: true,
+	// 	autoWidth: false,
+	// });
 	$("#add-btn").click(function(event){
 		event.preventDefault();
 		// var formData = $("#add-product-form").serialize();
@@ -43,8 +43,10 @@ $(document).ready(function(){
 		var id = $(this).parents("tr").attr("id");
 		var name = $(this).parents("tr").find(".name").text();
 		var code = $(this).parents("tr").find(".code").text();
+		
 		var description = $(this).parents("tr").find(".description").text();
-		var category = $(this).parents("tr").find(".category").text();
+		var price = $(this).parents("tr").find(".price").text();
+		var status = $(this).parents("tr").find(".status").text();
 		var img = $(this).parents("tr").find(".thumbnail").attr("src");
 		console.log(img);
 		// Hiển thị thông tin form cập nhật
@@ -52,7 +54,8 @@ $(document).ready(function(){
 		$("#uname").val(name);
 		$("#ucode").val(code);
 		$("#udescription").val(description);
-		$("#ucategory").val(category);
+		$("#uprice").val(price);
+		$("#ustatus").val(status);
 		$("#uimage-preview").attr("src", img);
 		// Hiển thị popup
 		$("#update").modal();
@@ -136,8 +139,8 @@ function getProducts(){
 				rows += "<td class='code'>"+product.product_code+"</td>";
 				rows += "<td class='price'>"+product.description+"</td>";
 				rows += "<td class='description'>"+product.price+"</td>";
-				//rows += "<td class='category'>"+product.type+"</td>";
-				rows += "<td class='category'>"+product.status+"</td>";
+				rows += "<td class='status'>"+product.status+"</td>";
+
 				rows += "<td>";
 				rows += "<button class='btn btn-primary edit'>Edit</button>";
 				rows += "<button class='btn btn-danger delete'>Delete</button>";

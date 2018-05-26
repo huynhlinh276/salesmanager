@@ -136,17 +136,23 @@
             <a class="dropdown-item small" href="#">View all alerts</a>
           </div>
         </li>
+
         <li class="nav-item">
-          <form class="form-inline my-2 my-lg-0 mr-lg-2">
-            <div class="input-group">
-              <input class="form-control" type="text" placeholder="Search for...">
-              <span class="input-group-btn">
-                <button class="btn btn-primary" type="button">
+          <form class="form-inline my-2 my-lg-0 mr-lg-2" action="search.php" method="get">
+        <div id="search" style="text-align: right;">
+            <form class="searchform" action="search.php" method="get">
+             
+              <div class="input-group" id="search">
+              <input class="form-control" type="text" name="search" placeholder="Search for...">
+            
+
+               <button class="btn btn-primary" type="button">
                   <i class="fa fa-search"></i>
                 </button>
-              </span>
-            </div>
-          </form>
+                 </div>
+            </form>
+          </div>  
+           </form>
         </li>
         <li class="nav-item">
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal" >
