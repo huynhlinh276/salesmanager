@@ -137,8 +137,8 @@ function getProducts(){
 				rows += "<td class='image'>"+"<img class='thumbnail' src='"+product.image+"'>"+"</td>";
 				rows += "<td class='name'>"+product.product_name+"</td>";
 				rows += "<td class='code'>"+product.product_code+"</td>";
-				rows += "<td class='price'>"+product.description+"</td>";
-				rows += "<td class='description'>"+product.price+"</td>";
+				rows += "<td class='description'>"+product.description+"</td>";
+				rows += "<td class='price'>"+product.price+"</td>";
 				rows += "<td class='status'>"+product.status+"</td>";
 
 				rows += "<td>";
